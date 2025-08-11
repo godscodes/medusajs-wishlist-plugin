@@ -1,6 +1,6 @@
 {
   "name": "@godscodes/medusa-wishlist-plugin",
-  "version": "0.4.21",
+  "version": "0.4.4",
   "description": "Plugin for wishlist functionality in Medusa.",
   "author": "Godscodes",
   "repository": {
@@ -12,7 +12,10 @@
   "files": [
     ".medusa/server"
   ],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "exports": {
+    ".": "./src/index.ts",
     "./package.json": "./package.json",
     "./workflows": "./.medusa/server/src/workflows/index.js",
     "./.medusa/server/src/modules/*": "./.medusa/server/src/modules/*/index.js",
@@ -36,21 +39,21 @@
     "prepublishOnly": "medusa plugin:build"
   },
   "devDependencies": {
-    "@medusajs/admin-sdk": "2.8.5",
-    "@medusajs/cli": "2.8.5",
-    "@medusajs/framework": "2.8.5",
-    "@medusajs/icons": "2.8.5",
-    "@medusajs/js-sdk": "2.8.5",
-    "@medusajs/medusa": "2.8.5",
-    "@medusajs/test-utils": "2.8.5",
+    "@medusajs/admin-sdk": "2.8.8",
+    "@medusajs/cli": "2.8.8",
+    "@medusajs/framework": "2.8.8",
+    "@medusajs/icons": "2.8.8",
+    "@medusajs/js-sdk": "2.8.8",
+    "@medusajs/medusa": "2.8.8",
+    "@medusajs/test-utils": "2.8.8",
     "@medusajs/ui": "4.0.12",
     "@mikro-orm/cli": "6.4.3",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
-    "@swc/core": "1.5.7",
-    "@types/jsonwebtoken": "^9.0.7",
+    "@swc/core": "1.10.1",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.2.25",
@@ -65,13 +68,13 @@
     "yalc": "^1.0.0-pre.53"
   },
   "peerDependencies": {
-    "@medusajs/admin-sdk": "2.8.3",
-    "@medusajs/cli": "2.8.3",
-    "@medusajs/framework": "2.8.3",
-    "@medusajs/icons": "2.8.3",
-    "@medusajs/js-sdk": "2.8.3",
-    "@medusajs/medusa": "2.8.3",
-    "@medusajs/test-utils": "2.8.3",
+    "@medusajs/admin-sdk": "2.8.8",
+    "@medusajs/cli": "2.8.8",
+    "@medusajs/framework": "2.8.8",
+    "@medusajs/icons": "2.8.8",
+    "@medusajs/js-sdk": "2.8.8",
+    "@medusajs/medusa": "2.8.8",
+    "@medusajs/test-utils": "2.8.8",
     "@medusajs/ui": "4.0.12",
     "@mikro-orm/cli": "6.4.3",
     "@mikro-orm/core": "6.4.3",
@@ -86,5 +89,6 @@
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.2"
-  }
+  },
+  "packageManager": "yarn@4.9.0+sha512.5f5f00843eae735dfab6f0442524603e987ceca55e98b36eb0120f4e58908e5b1406545321e46627dca97d15d562f23dc13fb96cabd4e6bc92d379f619001e4e"
 }

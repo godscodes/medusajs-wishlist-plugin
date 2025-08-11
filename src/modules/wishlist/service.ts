@@ -15,7 +15,7 @@ export default class WishlistModuleService extends MedusaService({
   ): Promise<number> {
     return (await context.manager?.createQueryBuilder("wishlist_item", "wi")
       .select(["wi.wishlist_id"], true)
-      .where("wi.product_variant_id IN (?)", [variantIds])
+      .where("wi.product_variant_id IN (?) AND wi.deleted_at IS NULL", [variantIds])
       .execute())?.length || 0
   }
 }
